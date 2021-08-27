@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qroma - Encuesta</title>
+    <link rel="stylesheet" href="./css/encuesta.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div class="encuesta-section">
+            <div class="es-title">
+                <h1>ejemplo sap</h1>
+            </div>
+            <div class="es-breadcrumb">
+                <a href="#">Pagina Principal</a> /
+                <a href="#">Cursos</a> /
+                <a href="#">Ejemplo SAP</a> /
+                <a href="#">General</a> /
+                <a href="#">4. Encuesta</a>
+            </div>
+            <div class="es-body">
+                <div class="esb-header">
+                    <h1>4. Encuesta</h1>
+                    <div class="esb-settings"></div>
+                </div>
+                <div class="esb-questions-panel">
+                    <div v-for="(item, index) in preguntas" class="esb-question row" :key="item.id">
+                        <div class="col-4"></div>
+                        <div class="esbq-text col-3">{{item.pregunta}}</div>
+                        <stars class="stars col-5"></stars>
+                    </div>
+                </div>          
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./js/encuesta.js"></script>
+</body>
+</html>
