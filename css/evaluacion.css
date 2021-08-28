@@ -36,7 +36,7 @@ body {
   border-radius: 5px;
 }
 .evsb-height {
-  height: 368px;
+  height: 20em;
 }
 .evsb-start {
   text-align: center;
@@ -125,9 +125,43 @@ body {
   .evsb-start-btn button {
     width: 100%;
   }
+  .evaluacion-section {
+    padding: 1em;
+  }
+  .evs-body {
+    padding: 1em;
+  }
+  .evsb-questions {
+    padding: 2em 1em;
+    display: inline-flex !important;
+  }
 }
 
-@media (min-width: 1100px) {
+@media (max-width: 800px) {
+  .evsb-progress-bar {
+    display: none;
+  }
+  .evsb-horizontal-progress-bar {
+    height: 5px;
+    width: 100%;
+    background: #b6e2bd 0% 0% no-repeat padding-box;
+    border-radius: 19px;
+  }
+  .evsb-horizontal-progress {
+    height: 5px;
+    background: #4db05b 0% 0% no-repeat padding-box;
+    border-radius: 19px;
+  }
+  .evsb-questions {
+    padding: 2em 1em;
+    display: inherit !important;
+  }
+  .col-pb {
+    height: 2em;
+  }
+}
+
+@media (min-width: 800px) {
   .col-pb {
     max-width: 5%;
     flex: 0 0 5%;
