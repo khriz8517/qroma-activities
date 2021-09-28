@@ -123,16 +123,18 @@ body {
 }
 
 .msb-bg {
-    width: 80px;
+    width: 5em;
     /* height: 72px; */
     text-align: center;
     color: #fff;
     border-radius: 11px 0 0 11px;
+    display: flex;
 }
 
 .msb-bg span {
     font-size: 3em;
-    padding: 0.6em 0 0 0px;
+    align-self: center;
+    flex: 1;
 }
 
 .msb-bg-yellow {
