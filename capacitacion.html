@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Qroma - Capacitacion</title>
+        <link rel="stylesheet" href="./css/capacitacion.css" />
+        <link rel="stylesheet" href="./css/checkbox.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div id="app">
+            <div v-if="!capacitado" class="cap-section">
+                <div>
+                    <p class="cs-title">¿Llevaste la capacitación?</p>
+                </div>
+                <div class="btns">
+                    <div>
+                        <button
+                            class="green-btn btn geb"
+                            @click="capacitado = true"
+                        >
+                            <span>Si</span>
+                        </button>
+                    </div>
+                    <div>
+                        <a href="#" class="gray-btn btn geb">
+                            <span>No</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div v-if="capacitado" class="adj-section">
+                <div class="">
+                    <div class="as-title">Adjuntar envidencia</div>
+                    <div class="as-description">
+                        Sube la captura de pantalla de tu capacitación en vivo.
+                    </div>
+                </div>
+                <div class="">
+                    <div class="msb-option">
+                        <div class="msb-bg msb-bg-gray">
+                            <span class="material-icons-round">
+                                add_circle_outline
+                            </span>
+                        </div>
+                        <div class="msb-option-body">
+                            <div class="msb-option-header">
+                                <div class="msb-option-title">
+                                    <span @click="$refs.file.click()"
+                                        >Sube un archivo</span
+                                    >
+                                    <input
+                                        v-show="false"
+                                        type="file"
+                                        ref="file"
+                                        name="evidencia_file"
+                                        @change="selectedFile"
+                                        accept=".jpg,.png"
+                                    />
+                                </div>
+                                <div class="msb-checkbox">
+                                    <label class="container">
+                                        <input
+                                            type="checkbox"
+                                            :checked="ifchecked"
+                                            disabled
+                                        />
+                                        <span class="checkmark disabled"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="msb-option-sub">.jpg | .png</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btns">
+                    <div>
+                        <button class="green-btn btn geb">
+                            <span>Continuar</span>
+                        </button>
+                    </div>
+                    <div>
+                        <a href="#" class="gray-btn btn gl">
+                            <span>Este curso no tiene evidencia</span></a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="./js/capacitacion.js"></script>
+    </body>
+</html>
